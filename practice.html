@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice match</title>
+   
+    <style>
+    #Bulb{ 
+        width: 200px;
+        height: 200px;
+        border: 2px solid gray;
+        border-radius: 50%;
+        color: blue;
+        font-size:50px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <h1 id="Bulb"></h1>
+    <button>ON</button>
+</body>
+<script>
+         
+    // for (let a = 0; a < 100; a++) {
+    //     if (a % 2 != 0) {
+    //         document.write(a + " ")
+    //     }
+       
+        
+    // } 
+ 
+//   for (let a = 1; a < 100; a = a+10) {
+//     for(let b = a; b < a+10; b++){
+//         document.write(b+" ")
+//     }
+//       document.write("<br>")
+//   }
+ 
+ var bulb = document.querySelector("#Bulb")
+ var btn = document.querySelector("button")
+
+ bulbOn = true
+ btn.addEventListener("focusin",function() {
+    if (bulbOn === true) {
+        console.log("ON")
+bulb.style.backgroundColor="yellow" 
+btn.innerHTML="OFF"
+bulbOn = false  
+    }else{
+        console.log("OFF")
+bulb.style.backgroundColor="white"
+btn.innerHTML="ON"
+
+bulbOn = true 
+    }
+
+ })
+
+</script>
+
+</html>
